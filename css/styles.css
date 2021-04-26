@@ -136,6 +136,8 @@ nav {
   fill: var(--color-link)
 }
 .mail {
+  display: flex;
+  align-items: center;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14px;
@@ -152,9 +154,13 @@ nav {
   height: 16px;
   stroke: currentColor;
   margin-right: 10px;
+  fill: currentColor;
 }
+
 .tel {
   font-style: normal;
+  display: flex;
+  align-items: center;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14px;
@@ -163,6 +169,7 @@ nav {
 }
 .tel:hover {
   color: #2196f3;
+  stroke: var(--color-link);
 }
 .mail-footer, .tel-footer{
   font-size: 14px;
@@ -242,6 +249,15 @@ font-style: normal;
 .about-item{
   
   margin-right: 30px;
+}
+.about-item::before {
+  display: inline-block;
+  content: '';
+  width: 270px;
+  height: 120px;
+  background-color: #F5F4FA;
+  border-radius: 4px;
+  background-image: url(../images/icons.svg#icon-antenna)
 }
 .mini-title {
   color: var(--color-title);
