@@ -170,13 +170,7 @@ nav {
 .tel:hover, :focus {
   color: #2196f3;
 }
-.mail-footer, .tel-footer{
-  font-size: 14px;
-line-height: 1.71;
-letter-spacing: 0.03em;
-color: rgba(255, 255, 255, 0.6);
-font-style: normal;
-}
+
 
 /* main */
 
@@ -405,6 +399,13 @@ font-style: normal;
 .social-icons-link:hover .social-icons-svg{
   fill: #fff;
 }
+
+.social-icons-link:focus {
+  background-color: var(--color-link);
+}
+.social-icons-link:focus .social-icons-svg{
+  fill: #fff;
+}
 .clients-section{
   padding-top: 94px;
   padding-bottom: 94px;
@@ -447,6 +448,11 @@ font-style: normal;
   padding-bottom: 60px;
   display: flex;
 }
+.footer-content{
+  
+  align-items: baseline;
+  display: flex;
+}
 .white {
   color: #fff;
 }
@@ -470,10 +476,25 @@ font-style: normal;
   width: 231px;
   margin-right: none;
 }
-.mail-footer{
-  display: flex;
-  margin-bottom: 9px;
-  display: inline-block;
+
+.mail-footer, .tel-footer{
+  font-size: 14px;
+line-height: 1.71;
+letter-spacing: 0.03em;
+color: rgba(255, 255, 255, 0.6);
+font-style: normal;
+margin-bottom: 9px;
+display: inline-block;
+}
+.mail-footer:hover, :focus {
+  color: var(--color-link);
+}
+.tel-footer:hover, :focus {
+  
+  color: var(--color-link);
+}
+.info-footer{
+  margin-right: 70px;
 }
 .footer-title{
   color: #fff;
@@ -484,13 +505,12 @@ font-style: normal;
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 
 }
 .list-icon-footer{
 
   display: flex;
-  justify-content: center;
 }
 .footer-item:not(:last-child) {
   margin-right: 10px;
@@ -506,9 +526,9 @@ font-style: normal;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.1);;
 }
-.footer-link:hover {
+.footer-link:hover, .footer-link:focus {
   background-color: var(--color-link);
-}
+} 
 .footer-icon{
     height: 20px;
     width: 20px;
@@ -583,6 +603,13 @@ font-style: normal;
 }
 .projects-item:last-child {
   margin-right: 0;
+}
+.projects-item:hover, .projects-item:focus {
+  background: #FFFFFF;
+border: 1px solid #EEEEEE;
+box-sizing: border-box;
+box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+
 }
 .projects-text{
   padding: 20px 24px 20px 24px;
