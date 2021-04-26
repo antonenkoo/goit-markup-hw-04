@@ -136,16 +136,16 @@ nav {
   fill: var(--color-link)
 }
 .mail {
-  display: flex;
-  align-items: center;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14px;
   letter-spacing: 0.02em;
   color: var(--grey);
   fill: var(--grey);
+  display: flex;
+  align-items: center;
 }
-.mail:hover {
+.mail:hover, :focus {
   color: var(--color-link);
   fill: var(--color-link);
 }
@@ -154,22 +154,21 @@ nav {
   height: 16px;
   stroke: currentColor;
   margin-right: 10px;
-  fill: currentColor;
 }
-
 .tel {
   font-style: normal;
-  display: flex;
-  align-items: center;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14px;
   letter-spacing: 0.02em;
   color: var(--grey);
+  display: flex;
+  align-items: center;
+  fill: currentColor;
+  
 }
-.tel:hover {
+.tel:hover, :focus {
   color: #2196f3;
-  stroke: var(--color-link);
 }
 .mail-footer, .tel-footer{
   font-size: 14px;
@@ -246,18 +245,46 @@ font-style: normal;
 .about-list {
   display: flex;
 }
-.about-item{
+.about-item:not(:last-child){
   
   margin-right: 30px;
+} 
+.about-item {
+  width: 270px;
 }
-.about-item::before {
+.about-item::before{
   display: inline-block;
   content: '';
   width: 270px;
   height: 120px;
+  margin-bottom: 30px;
   background-color: #F5F4FA;
   border-radius: 4px;
-  background-image: url(../images/icons.svg#icon-antenna)
+}
+
+.icon-antenna::before {
+  background-image: url(../images/antenna.svg);
+  background-size: 70px 70px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.icon-clock::before{
+  background-image: url(../images/clock.svg);
+  background-size: 70px 70px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.icon-plan::before{
+  background-image: url(../images/diagram.svg);
+  background-size: 70px 70px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.icon-astronavt::before{
+  background-image: url(../images/astronaut.svg);
+  background-size: 70px 70px;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .mini-title {
   color: var(--color-title);
@@ -367,7 +394,7 @@ font-style: normal;
   justify-content: center;
   border-radius: 50%;
 }
-.social-icons-link:hover{
+.social-icons-link:hover {
   background-color: var(--color-link);
 }
 .social-icons-svg {
@@ -405,7 +432,7 @@ font-style: normal;
   border: 1px solid #afb1b8;
   border-radius: 4px;
 }
-.clients-link:hover {
+.clients-link:hover, :focus {
   fill: var(--color-link);
   border-color: var(--color-link);
 }
@@ -418,6 +445,7 @@ font-style: normal;
   background-color: #2f303a;
   padding-top: 60px;
   padding-bottom: 60px;
+  display: flex;
 }
 .white {
   color: #fff;
@@ -436,12 +464,61 @@ font-style: normal;
   display: flex;
   display: inline-block;
   margin-bottom: 9px;
+  width: 231px;
+}
+.contacts-footer{
+  width: 231px;
+  margin-right: none;
 }
 .mail-footer{
   display: flex;
   margin-bottom: 9px;
   display: inline-block;
 }
+.footer-title{
+  color: #fff;
+  font-family: var(--font);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+
+}
+.list-icon-footer{
+
+  display: flex;
+  justify-content: center;
+}
+.footer-item:not(:last-child) {
+  margin-right: 10px;
+
+}
+.footer-link{
+
+  display: flex;
+  width: 44px;
+  height: 44px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);;
+}
+.footer-link:hover {
+  background-color: var(--color-link);
+}
+.footer-icon{
+    height: 20px;
+    width: 20px;
+    fill: #fff;
+}
+.footer-link:hover .footer-icon{
+  fill: #fff;
+}
+
+
 /* PAGE 2 ************************************************************************************************************/
 .line{
   display: block;
